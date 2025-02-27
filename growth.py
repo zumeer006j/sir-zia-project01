@@ -59,9 +59,8 @@ if uploaded_files:
                                 st.bar_chart(df.select_dttypes(include='number').iloc[:,:2])
                                 st.subheader("Conversion Options")
                             conversion_type = st.radio(f"convert{file.name} to:",["CSV","Excel"],key=file.name)
-                            
-                             if st.button(f"Convert{file.name}"):
-                                buffer = BytesIO()
+                            if st.button(f"Convert{file.name}"):
+                            buffer = BytesIO()
                                 if conversion_type == "CSV":
                                     df.to.csv(buffer, index=False)
                                     file_name = file.name.replace(file_ext,".csv")
