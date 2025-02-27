@@ -30,9 +30,8 @@ if uploaded_files:
         elif file_ext =="xlsx":
 
                 df=pd.read_excel(file)
-                else:
-
-                    st.error(f"unsuspended file types:{file_ext}")
+        else:
+            st.error(f"unsuspended file types:{file_ext}")
                     continue
                     st.write("preview the hand of the data frame")
                     st.dataframes(df.head())
