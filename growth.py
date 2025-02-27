@@ -57,9 +57,7 @@ if uploaded_files:
                             st.subheader("Data Visualization")
                             if st.checkbox(f"Show visualization for {file.name}"):
                                 st.bar_chart(df.select_dttypes(include='number').iloc[:,:2])
-
-
-                             st.subheader("Conversion Options")
+                                st.subheader("Conversion Options")
                              conversion_type = st.radio(f"convert{file.name} to:",["CSV","Excel"],key=file.name)
                              if st.button(f"Convert{file.name}"):
                                 buffer = BytesIO()
