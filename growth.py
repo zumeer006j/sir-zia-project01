@@ -27,7 +27,8 @@ if uploaded_files:
 
         if file_ext ==".csv":
             df = pd.read_csv(file)
-            elif file_ext =="xlsx":
+        elif file_ext =="xlsx":
+
                 df=pd.read_excel(file)
                 else:
                     st.error(f"unsuspended file types:{file_ext}")
