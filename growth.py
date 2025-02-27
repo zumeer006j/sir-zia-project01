@@ -21,7 +21,7 @@ st.write("Transform Your files between CSV and Excl formates with built-in data 
 
 uploaded_files = st.files_uploader("upload your files(accepts CSV or Excel):",type=["cvs","xlsx"],accept_mutiple_files=(True))
 
-ifuploaded_files:
+if uploaded_files:
     for file in uploaded_files:
         file_ext = os.path.splitext(file.name)[-1].lower()
 
