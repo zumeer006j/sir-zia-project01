@@ -31,6 +31,7 @@ if uploaded_files:
 
                 df=pd.read_excel(file)
                 else:
+
                     st.error(f"unsuspended file types:{file_ext}")
                     continue
                     st.write("preview the hand of the data frame")
