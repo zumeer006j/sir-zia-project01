@@ -36,7 +36,7 @@ if uploaded_files:
         st.write("preview the hand of the data frame")
         st.dataframes(df.head())
         st.subheader("Data cleaning Options")
-                    if st.check(f"Clean data for {file.name}"):
+        if st.check(f"Clean data for {file.name}"):
                         col1, col2 = st.columns(2)
 
                         with col1:
