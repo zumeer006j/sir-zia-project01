@@ -23,7 +23,7 @@ uploaded_files = st.files_uploader("upload your files(accepts CSV or Excel):",ty
 
 ifuploaded_files:
     for file in uploaded_files:
-        fil_ext = os.path.splitext(file.name)[-1].lower()
+        file_ext = os.path.splitext(file.name)[-1].lower()
 
         if file_ext ==".csv":
             df = pd.read_csv(file)
